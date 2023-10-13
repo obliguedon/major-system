@@ -1,0 +1,29 @@
+= Mnemonic major system app: A customizable dictionary to search words from number and vice-versa
+:doctype: book
+:toc:
+:author: Obliguedon
+:revdate: 2023-10-13
+:revnumber: v0.1
+:xrefstyle: full
+
+== What is a Mnemonic Major System ?
+
+[quote, 'https://en.wikipedia.org/wiki/Mnemonic_major_system[Wikipedia]']
+____
+The major system (also called the phonetic number system, phonetic mnemonic system, or Herigone's mnemonic system) is a mnemonic technique used to help in memorizing numbers.
+
+The system works by converting numbers into consonants, then into words by adding vowels. The system works on the principle that images can be remembered more easily than numbers.
+____
+
+== How to search in the dictionnary ?
+
+The idea is to use a phonetical dictionnary like this one -> https://github.com/open-dict-data/ipa-dict[ipa-dict]
+
+Associate with each sound a number (that's where the customizable part is)
+
+And search for words that match the patern.
+
+For example take 42, 4 is `/r/` or `/ɹ/` and 2 is `/n/` with the https://en.wikipedia.org/wiki/International_Phonetic_Alphabet[IPA].
+So now, we need to find the patern `/rn/` or `/ɹn/` with vowel before, between or after those 2 consonants in the dictionary.
+
+> in regex it would be something like `[<vowel>]\*[rɹ][<vowel>]*n[<vowel>]*`
