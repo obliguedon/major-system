@@ -1,8 +1,8 @@
-= Mnemonic major system app: A customizable dictionary to search words from number and vice-versa
+= Mnemonic major system app: A customizable dictionary to search words from number
 :doctype: book
 :toc:
 :author: Obliguedon
-:revdate: 2023-10-13
+:revdate: 2024-02-07
 :revnumber: v0.1
 :xrefstyle: full
 
@@ -19,11 +19,23 @@ ____
 
 The idea is to use a phonetical dictionnary like this one -> https://github.com/open-dict-data/ipa-dict[ipa-dict]
 
-Associate with each sound a number (that's where the customizable part is)
+Associate with each sound a number (that's where the customizable part is) +
+_You can listen the sound of each symbols on https://www.ipachart.com/[IPA-Chart]_
 
 And search for words that match the patern.
 
 For example take 42, 4 is `/r/` or `/ɹ/` and 2 is `/n/` with the https://en.wikipedia.org/wiki/International_Phonetic_Alphabet[IPA].
 So now, we need to find the patern `/rn/` or `/ɹn/` with vowel before, between or after those 2 consonants in the dictionary.
 
-> in regex it would be something like `[<vowel>]\*[rɹ][<vowel>]*n[<vowel>]*`
+_in regex it would be something like `[<vowel>]\*[rɹ][<vowel>]*n[<vowel>]*`_
+
+== The APP
+
+NOTE:: it's only a Proof Of Concept, this app may or may not be further developed
+
+the app is coded in python with the https://kivy.org/[Kivy framework]
+
+To build it the easy way, let's use https://buildozer.readthedocs.io/en/latest/[Buildozer]
+
+_See installation instructions https://buildozer.readthedocs.io/en/latest/installation.html[Here]_ +
+_And the Kivy instructions on how to build it https://kivy.org/doc/stable/guide/packaging-android.html#buildozer[Here]_
